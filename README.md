@@ -5,11 +5,14 @@ javascript class helps track changes in array and object
 
 ## Create instance
 ```html
+<script>
   var listener = new CoreListener();
+</script>
 ```
 
 ## For array
 ```html
+<script>
  var array = [1, 2, 3];
   listener.add({
     entity: array,
@@ -29,10 +32,12 @@ javascript class helps track changes in array and object
   array.pop(); // NOT called callback
 
   console.log(array); // [1, 2, 3, 4]
+</script>
 ```
  
 ## For object
 ```html
+<script>
   var user = {
       name: 'John',
       age: 25
@@ -57,6 +62,7 @@ javascript class helps track changes in array and object
   
     user.age = 32 // NOT called callback
     user.name = 'Jordan' // called callback
+</script>
 ```
 
 ##Browser Support
