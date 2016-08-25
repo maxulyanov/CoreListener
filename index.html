@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CoreListener</title>
+  <script src="CoreListener.js"></script>
+</head>
+<body>
+
+<script>
+
+  // Примеры для демо
+
+  'use strict';
+
+  var listener = new CoreListener();
+
+
+
+  // FOR OBJECT
+  var user = {
+    name: 'John',
+    age: 25
+  }
+
+  listener.add({
+      entity: user,
+      properties: ['name', 'age'],
+      callback: function(args) {
+        console.log('props:' + args.prop); // changed property
+        console.info(args.previousValue); // previos value of the object
+        console.warn(args.value); // current value of the object
+      }
+    });
+
+  user.age = 30; // called callback
+
+
+  listener.remove({
+    entity: user,
+    properties: 'age'
+  });
+
+  user.age = 32 // NOT called callback
+  user.name = 'Jordan' // called callback
+
+
+
+
+</script>
+
+</body>
+</html>
