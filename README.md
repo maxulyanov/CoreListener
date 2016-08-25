@@ -30,8 +30,6 @@ javascript class helps track changes in array and object
     entity: array
   });
   array.pop(); // NOT called callback
-
-  console.log(array); // [1, 2, 3, 4]
 </script>
 ```
  
