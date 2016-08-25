@@ -1,7 +1,10 @@
 # CoreListener
 
-javascript class helps track changes in array and object
+Javascript class helps track changes in array and object:
 
+
+##NPM
+`npm install core-listener`
 
 ## Create instance
 ```html
