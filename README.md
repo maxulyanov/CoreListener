@@ -17,6 +17,7 @@ Javascript class helps track changes in array and object:
 ```html
 <script>
  var array = [1, 2, 3];
+ 
   listener.add({
     entity: array,
     callback: function (args) {
@@ -32,6 +33,7 @@ Javascript class helps track changes in array and object:
   listener.remove({
     entity: array
   });
+  
   array.pop(); // NOT called callback
 </script>
 ```
